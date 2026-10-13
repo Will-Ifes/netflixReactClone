@@ -2,17 +2,18 @@
 
 Interface inspirada na Netflix que apresenta filmes e séries obtidos do TMDB.
 
-## Contexto e objetivo
-
 Estudo de componentes e consumo de API em React 18 e Vite. Sem afiliação às marcas.
 
-## Funcionalidades presentes
+## Destaques
 
 - Listas por categorias e gêneros.
 - Destaque de um título.
 - Dados em português obtidos pela API.
 
-## Por dentro do código
+<details>
+<summary><strong>Organização e código</strong></summary>
+
+### Por dentro do código
 
 | Código | O que observar |
 | --- | --- |
@@ -21,7 +22,12 @@ Estudo de componentes e consumo de API em React 18 e Vite. Sem afiliação às m
 | [`src/components/MovieRow/index.jsx`](src/components/MovieRow/index.jsx) | Fileira de títulos. |
 | [`src/components/FeaturedMovie/index.jsx`](src/components/FeaturedMovie/index.jsx) | Conteúdo em destaque. |
 
-## Executar localmente
+</details>
+
+<details>
+<summary><strong>Executar e consultar</strong></summary>
+
+### Executar localmente
 
 Requer Node.js e npm compatíveis com as dependências versionadas.
 
@@ -36,7 +42,7 @@ Abra o endereço informado pelo servidor no terminal.
 
 O cliente ainda usa uma chave no arquivo `src/Tmdb.jsx`. Utilize sua própria configuração de API; externalizar esse valor é uma melhoria pendente.
 
-## Comandos disponíveis
+### Comandos disponíveis
 
 | Comando | Script versionado |
 | --- | --- |
@@ -44,11 +50,14 @@ O cliente ainda usa uma chave no arquivo `src/Tmdb.jsx`. Utilize sua própria co
 | `npm run build` | `vite build` |
 | `npm run preview` | `vite preview` |
 
-Os comandos refletem o `package.json`. A existência de um script não comprova execução bem-sucedida no ambiente atual.
+</details>
 
-## Escopo e evolução
+<details>
+<summary>Escopo e referências</summary>
 
 Sem streaming, assinatura ou autenticação. Estados de erro e carregamento precisam ser evoluídos.
+
+</details>
 
 ---
 
