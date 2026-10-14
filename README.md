@@ -1,8 +1,19 @@
+<p align="center">
+  <img src="./.github/readme-cover.svg" alt="Movie Shelf: Catálogo por categorias e título em destaque." width="100%" />
+</p>
+
 # Catálogo de filmes · React
 
 Interface inspirada na Netflix que apresenta filmes e séries obtidos do TMDB.
 
 Estudo de componentes e consumo de API em React 18 e Vite. Sem afiliação às marcas.
+
+## Explore o diferencial
+
+| Ponto de entrada | O que observar |
+| --- | --- |
+| [Composição de catálogo](src/App.jsx) | A página combina destaque e fileiras de títulos em componentes distintos. |
+| [Navegação em fileiras](src/components/MovieRow/index.jsx) | O componente de lista concentra a apresentação dos títulos por categoria. |
 
 ## Destaques
 
