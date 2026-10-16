@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="./.github/readme-cover.svg" alt="Clone de streaming: catálogo, destaque e fileiras de filmes." width="100%" />
+  <a href="https://will-ifes.github.io/netflixReactClone/">
+    <img src="./.github/readme-cover.svg?v=20261016" alt="Streaming em React. Interface de estudo com perfis, catálogo, busca e Minha Lista." width="100%" />
+  </a>
 </p>
 
 # Clone de interface de streaming · React e TypeScript
@@ -12,7 +14,11 @@ Interface no estilo da Netflix com dados reais do TMDB: perfis, destaque, fileir
 > **Clone de estudo não oficial e sem fins lucrativos.** Não tem vínculo, patrocínio ou autorização da Netflix, e Netflix é marca registrada da Netflix, Inc. O logotipo é escrito em texto, sem usar a imagem oficial. A página não reproduz filmes: os trailers são vídeos públicos do YouTube. Dados e imagens vêm do TMDB; este produto usa a API do TMDB, mas não é endossado nem certificado por ele.
 
 <p align="center">
-  <img src="./.github/demo.gif" alt="Demonstração: escolha do perfil Will, destaque e fileiras, setas da fileira, ficha de um filme adicionado à Minha Lista, busca por stranger com resultados e volta para a tela de perfis." width="720" />
+  <a href="https://will-ifes.github.io/netflixReactClone/">
+    <img src="./.github/demo.gif" alt="Demonstração da versão atual com escolha de perfil, catálogo, detalhes, Minha Lista e busca. Clique para abrir a página." width="720" />
+  </a>
+  <br />
+  <sub>Clique na demonstração para explorar a interface publicada.</sub>
 </p>
 
 ## O que dá para fazer
