@@ -1,0 +1,14 @@
+.aviso {
+    position: relative;
+    z-index: 30;
+    padding: 6px var(--margem);
+    background: var(--aviso);
+    color: #1a1400;
+    font-size: 13px;
+    text-align: center;
+}
+
+.aviso a {
+    color: inherit;
+    font-weight: 700;
+}

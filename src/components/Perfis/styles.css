@@ -1,0 +1,85 @@
+.perfis {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: calc(100vh - 32px);
+}
+
+.perfis__topo {
+    padding: 24px var(--margem);
+}
+
+.perfis__conteudo {
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    gap: 32px;
+    padding: 24px var(--margem) 64px;
+    text-align: center;
+}
+
+.perfis__conteudo h1 {
+    font-size: clamp(28px, 5vw, 56px);
+    font-weight: 500;
+}
+
+.perfis__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(16px, 3vw, 32px);
+    list-style: none;
+}
+
+@media (max-width: 600px) {
+    .perfis__lista {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+.perfis__perfil {
+    display: grid;
+    justify-items: center;
+    gap: 12px;
+    border: 0;
+    background: none;
+    color: var(--texto-suave);
+    font-size: clamp(14px, 2vw, 18px);
+}
+
+.perfis__perfil:hover,
+.perfis__perfil:focus-visible {
+    color: var(--texto);
+}
+
+.perfis__perfil:hover .avatar-perfil,
+.perfis__perfil:focus-visible .avatar-perfil {
+    outline: 3px solid var(--texto);
+    outline-offset: 0;
+}
+
+.perfis__perfil:focus-visible {
+    outline: none;
+}
+
+.perfis__nota {
+    max-width: 52ch;
+    color: var(--texto-suave);
+    font-size: 14px;
+}
+
+.avatar-perfil {
+    display: grid;
+    place-items: center;
+    width: clamp(88px, 14vw, 144px);
+    aspect-ratio: 1;
+    border-radius: 6px;
+    color: rgb(255 255 255 / 92%);
+    font-size: clamp(56px, 9vw, 96px);
+}
+
+.avatar-perfil[data-tamanho='p'] {
+    width: 32px;
+    border-radius: 4px;
+    font-size: 22px;
+}

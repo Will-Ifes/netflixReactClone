@@ -1,0 +1,149 @@
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: clamp(12px, 3vw, 40px);
+    min-height: 68px;
+    margin-bottom: -68px;
+    padding: 0 var(--margem);
+    background: linear-gradient(180deg, rgb(0 0 0 / 75%) 10%, transparent);
+    transition: background-color 300ms;
+}
+
+.cabecalho[data-solido] {
+    background-color: var(--fundo);
+}
+
+.cabecalho__pular {
+    position: absolute;
+    top: -100px;
+    left: var(--margem);
+    padding: 8px 12px;
+    border-radius: 4px;
+    background: var(--texto);
+    color: #000;
+    font-weight: 700;
+}
+
+.cabecalho__pular:focus {
+    top: 12px;
+}
+
+.cabecalho__marca {
+    border: 0;
+    background: none;
+}
+
+.cabecalho__abas {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.cabecalho__abas button {
+    padding: 8px 0;
+    border: 0;
+    background: none;
+    color: #e5e5e5;
+    font-size: 14px;
+    transition: color 150ms;
+}
+
+.cabecalho__abas button:hover {
+    color: var(--texto-suave);
+}
+
+.cabecalho__abas button[aria-current='page'] {
+    color: var(--texto);
+    font-weight: 700;
+}
+
+.cabecalho__direita {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: auto;
+}
+
+.cabecalho__busca {
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho__busca[data-aberta] {
+    gap: 8px;
+    padding-left: 10px;
+    border: 1px solid var(--texto);
+    background: rgb(0 0 0 / 75%);
+}
+
+.cabecalho__busca input {
+    width: clamp(120px, 22vw, 240px);
+    min-height: 36px;
+    border: 0;
+    background: transparent;
+    font-size: 14px;
+}
+
+.cabecalho__busca input::-webkit-search-cancel-button {
+    display: none;
+}
+
+.cabecalho__busca input::placeholder {
+    color: var(--texto-suave);
+}
+
+.cabecalho__busca input:focus {
+    outline: none;
+}
+
+.cabecalho__busca:focus-within {
+    outline: 3px solid var(--texto);
+    outline-offset: 2px;
+}
+
+.cabecalho__icone {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background: none;
+}
+
+.cabecalho__perfil {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 0;
+    background: none;
+    font-size: 14px;
+}
+
+@media (max-width: 760px) {
+    .cabecalho {
+        flex-wrap: wrap;
+        row-gap: 0;
+        padding-top: 8px;
+        margin-bottom: -112px;
+    }
+
+    .cabecalho .marca {
+        font-size: 28px;
+    }
+
+    .cabecalho nav {
+        order: 3;
+        width: 100%;
+    }
+
+    .cabecalho__perfil-nome {
+        display: none;
+    }
+
+    .cabecalho__busca[data-aberta] input {
+        width: 110px;
+    }
+}
