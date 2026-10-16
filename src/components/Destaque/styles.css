@@ -1,0 +1,72 @@
+.destaque {
+    min-height: min(92vh, 900px);
+    background-color: #000;
+    background-position: center top;
+    background-size: cover;
+}
+
+/* Duas sombras como no original: da esquerda para o texto e de baixo para as fileiras */
+.destaque__sombra {
+    display: flex;
+    align-items: center;
+    min-height: inherit;
+    background:
+        linear-gradient(to top, var(--fundo) 0%, transparent 35%),
+        linear-gradient(to right, rgb(0 0 0 / 85%) 25%, transparent 75%);
+}
+
+.destaque__conteudo {
+    display: grid;
+    gap: 14px;
+    max-width: 620px;
+    padding: 120px var(--margem) 160px;
+}
+
+.destaque__tipo {
+    color: var(--texto-suave);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.destaque h1 {
+    font-size: clamp(36px, 6vw, 64px);
+    line-height: 1.05;
+    text-shadow: 0 2px 12px rgb(0 0 0 / 50%);
+}
+
+.destaque__meta {
+    display: flex;
+    gap: 16px;
+    font-weight: 700;
+}
+
+.destaque__nota {
+    color: #46d369;
+}
+
+.destaque__sinopse {
+    color: #e5e5e5;
+    font-size: clamp(15px, 1.6vw, 19px);
+    text-shadow: 0 1px 6px rgb(0 0 0 / 60%);
+}
+
+.destaque__acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.destaque--esqueleto {
+    background: linear-gradient(110deg, #1b1b1b 30%, #262626 50%, #1b1b1b 70%);
+    background-size: 200% 100%;
+    animation: brilho 1.4s infinite;
+}
+
+@keyframes brilho {
+    to {
+        background-position: -200% 0;
+    }
+}

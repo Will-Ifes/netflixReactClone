@@ -1,0 +1,23 @@
+.marca {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 6px;
+    color: var(--vermelho);
+    font: 400 34px/1 var(--fonte-marca);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.marca[data-tamanho='g'] {
+    font-size: 56px;
+}
+
+.marca__selo {
+    margin-top: 2px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    background: var(--aviso);
+    color: #1a1400;
+    font: 700 10px/1.4 var(--fonte);
+    letter-spacing: 0.04em;
+}

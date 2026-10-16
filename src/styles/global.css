@@ -1,12 +1,122 @@
-* {
+:root {
+    color-scheme: dark;
+    --fundo: #141414;
+    --superficie: #1f1f1f;
+    --superficie-2: #2a2a2a;
+    --linha: #3a3a3a;
+    --texto: #ffffff;
+    --texto-suave: #b3b3b3;
+    --vermelho: #e50914;
+    --vermelho-escuro: #b20710;
+    --aviso: #ffd25c;
+    --raio: 6px;
+    --margem: clamp(16px, 4vw, 60px);
+    --fonte: 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
+    --fonte-marca: 'Bebas Neue', Impact, sans-serif;
+}
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body, input, button {
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
-
+body {
+    min-height: 100vh;
+    background: var(--fundo);
+    color: var(--texto);
+    font: 400 16px/1.5 var(--fonte);
     -webkit-font-smoothing: antialiased;
+}
+
+button,
+input {
+    font: inherit;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+:focus-visible {
+    outline: 3px solid var(--texto);
+    outline-offset: 2px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 0 22px;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: background-color 150ms, transform 150ms;
+}
+
+.botao--branco {
+    background: #ffffff;
+    color: #000000;
+}
+
+.botao--branco:hover {
+    background: #d9d9d9;
+}
+
+.botao--cinza {
+    background: rgb(109 109 110 / 70%);
+    color: #ffffff;
+}
+
+.botao--cinza:hover {
+    background: rgb(109 109 110 / 50%);
+}
+
+.botao--icone {
+    width: 44px;
+    padding: 0;
+    border: 2px solid rgb(255 255 255 / 60%);
+    border-radius: 50%;
+    background: rgb(42 42 42 / 60%);
+    color: #ffffff;
+}
+
+.botao--icone:hover {
+    border-color: #ffffff;
+}
+
+.botao--icone[aria-pressed='true'] {
+    border-color: #ffffff;
+    background: #ffffff;
+    color: #000000;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
